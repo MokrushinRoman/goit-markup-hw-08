@@ -1,0 +1,86 @@
+.footer {
+  
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+
+  background-color: #2f303a;
+}
+
+.footer-container {
+  @include flex-centred($ai: baseline);
+}
+
+.footer-logo {
+  margin-bottom: 20px;
+
+  transition: text-shadow var(--transition);
+
+  .logo--white {
+    color: #ffffff;
+  }
+
+  &:hover,
+  &:focus {
+    text-shadow: -3px -1px 1.5px rgba(255, 255, 255, 0.116);
+  }
+}
+
+// ADDRESS
+
+.address {
+  margin-right: 70px;
+}
+
+.address__item {
+  .address__item + & {
+    margin-top: 9px;
+  }
+}
+
+.address__link {
+  @include font(null, 14px, 24 / 14, 00.03em);
+
+
+  transition: color var(--transition);
+
+  &--white {
+    color: #ffffff;
+  }
+
+  &--gray {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+// SOCIALS
+
+.top-text {
+  &--white {
+    margin-bottom: 20px;
+
+    color: #ffffff;
+  }
+}
+
+.socials__link--transparent {
+  background: rgba(255, 255, 255, 0.1);
+
+  transition: background-color var(--transition);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
+}
+
+.socials__icon--white {
+  fill: #ffffff;
+}
+
+@import '../components/subscription-form';

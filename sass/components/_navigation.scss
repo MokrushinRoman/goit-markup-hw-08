@@ -1,0 +1,28 @@
+.navigation__list {
+  @include flex-centred();
+
+  @include font(500, 14px, 16 / 14, 0.02em);
+}
+
+.navigation__item {
+  position: relative;
+
+  .navigation__item + & {
+    margin-left: 50px;
+  }
+}
+
+.navigation__link {
+  padding: 32px 0 32px;
+
+  transition: color var(--transition);
+
+  &--black {
+    color: var(--navigation-color);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}

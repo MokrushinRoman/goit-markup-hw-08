@@ -1,0 +1,37 @@
+.customers {
+  background-color: #ffffff;
+}
+
+.customers__list {
+  @include flex-centred($jc: space-between);
+  margin-top: 50px;
+}
+
+.customers__image {
+  @include flex-centred();
+
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+
+  border-radius: 4px;
+  background-color: transparent;
+
+  transition: border-color var(--transition);
+
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
+}
+
+.customers__icon {
+  fill: #afb1b8;
+
+  transition: fill var(--transition);
+
+  .customers__image:hover &,
+  .customers__image:focus & {
+    fill: var(--accent-color);
+  }
+}

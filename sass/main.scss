@@ -1,0 +1,29 @@
+@import './base/normalize';
+@import './utilits/vars';
+@import './base/reset';
+@import './utilits/hidden';
+@import './utilits/mixins';
+@import './utilits/current';
+@import './utilits/animations';
+
+@import './components/section';
+@import './components/container';
+@import './components/logo';
+@import './components/navigation';
+@import './components/button';
+@import './components/title';
+@import './components/top-text';
+@import './components/socials';
+@import './components/modal';
+@import './components/close-button';
+@import './components/filter';
+@import './components/grid';
+
+@import './layout/header';
+@import './layout/hero';
+@import './layout/benefits';
+@import './layout/about';
+@import './layout/team';
+@import './layout/customers';
+@import './layout/footer';
+@import './layout/portfolio';

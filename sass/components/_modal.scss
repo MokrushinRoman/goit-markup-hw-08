@@ -1,0 +1,166 @@
+.backdrop {
+  z-index: 5;
+  @include position($pos: fixed, $t: 0, $l: 0);
+
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+
+  transition: visibility var(--transition), opacity var(--transition);
+}
+
+.modal {
+  @include position(absolute, 50%, 50%);
+  transform: translate(-50%, -50%) scale(1);
+
+  @include flex-centred();
+  flex-direction: column;
+  text-align: center;
+  width: 530px;
+  padding: 40px;
+
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transition: transform var(--transition) 200ms;
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.modal__title {
+  margin-bottom: 30px;
+  @include font(700, 20px, 23 / 20, 00.03em);
+
+  &--black {
+    color: var(--title-color);
+  }
+}
+
+.modal__form {
+  width: 450px;
+}
+
+.modal_form-field {
+  position: relative;
+}
+
+.modal__input {
+  width: 100%;
+  padding: 9.5px 42px;
+  margin-bottom: 28px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  border-radius: 4px;
+  outline: transparent;
+
+  @include font(400, 14px, 16 / 14, 00.01em);
+
+  transition: border-color var(--transition);
+
+  &:focus {
+    border-color: var(--accent-color);
+  }
+
+  &::placeholder {
+    @include font(400, 14px, 16 / 14, 00.01em);
+    color: rgba(33, 33, 33, 0.374);
+  }
+}
+
+.modal__label {
+  @include position($t: -15px);
+
+  @include font(null, 12px, 14 / 12, 00.01em);
+
+  color: #757575;
+
+  transition: visibility var(--transition), opacity var(--transition);
+
+  .modal__input:focus + &,
+  .modal__textarea:focus + & {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.modal__icon {
+  @include position($t: 11px, $l: 12px);
+  transition: fill var(--transition);
+
+  .modal__input:focus ~ & {
+    fill: var(--accent-color);
+  }
+}
+
+.modal__textarea-container {
+  position: relative;
+
+  width: 450px;
+}
+
+.modal__textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+
+  border-radius: 4px;
+
+  resize: none;
+  outline: transparent;
+
+  &:focus {
+    border-color: var(--accent-color);
+  }
+
+  &::placeholder {
+    @include font(400, 14px, 16 / 14, 00.01em);
+    color: rgba(33, 33, 33, 0.374);
+  }
+}
+
+.checkbox__label {
+  @include flex-centred();
+  @include font(null, 14px, 24 / 14, 00.03em);
+
+  color: #757575;
+}
+
+.modal__checkbox-container {
+  margin-bottom: 30px;
+}
+
+.checkbox__icon {
+  width: 16px;
+  height: 15px;
+  margin-right: 9px;
+  border: 2px solid #212121;
+
+  border-radius: 2px;
+  background-color: transparent;
+  fill: transparent;
+
+  .checkbox__input:checked + & {
+    border: none;
+
+    background-color: var(--accent-color);
+    fill: #ffffff;
+  }
+}
+
+.checkbox__link {
+  margin-left: 3px;
+
+  text-decoration: underline;
+
+  color: var(--accent-color);
+}
+
+.modal__subscription {
+  margin: 0 auto;
+}

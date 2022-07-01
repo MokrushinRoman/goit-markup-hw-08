@@ -1,0 +1,78 @@
+.subscription-container {
+  margin-left: auto;
+}
+
+.form {
+  @include flex-centred();
+
+  transition: transform var(--transition);
+
+  &:focus-within {
+    transform: translateY(10px);
+  }
+}
+
+.form__field {
+  position: relative;
+}
+
+.form__input {
+  width: 358px;
+  height: 50px;
+  padding: 15px;
+  margin-right: 12px;
+  border: 1px solid #000000;
+
+  background-color: transparent;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  outline: transparent;
+
+  @include font(400, 14px, 24 / 14, 00.03em);
+
+  transition: border var(--transition);
+
+  &--white-transparent {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    color: #ffffff;
+  }
+
+  &:focus {
+    border-color: var(--accent-color);
+  }
+
+  &:not(:placeholder-shown):valid {
+    border-color: seagreen;
+  }
+  &:not(:placeholder-shown):invalid {
+    border-color: crimson;
+  }
+}
+
+.form__input::placeholder {
+  @include font(null, 16px, 20 / 16, 00.03em);
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.form__label {
+  @include position(absolute, -25px, 5px);
+
+  @include font(400, 14px, 24 / 14, 00.03em);
+
+  transition: visibility var(--transition), opacity var(--transition);
+
+  &--gray {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .form__input:focus + & {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.form__icon {
+  margin-left: 10px;
+}

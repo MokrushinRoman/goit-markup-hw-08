@@ -1,0 +1,23 @@
+.portfolio {
+  background-color: #ffffff;
+}
+
+.filter {
+  @include flex-centred();
+  margin: 0 auto 50px;
+}
+
+.filter__item {
+  .filter__item + & {
+    margin-left: 8px;
+  }
+}
+.filter__button {
+  padding: 6px 22px;
+  border: none;
+  text-align: center;
+
+  border-radius: 4px;
+
+  @include font(500, 16px, 26 / 16, 00.03em);
+}

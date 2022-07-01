@@ -1,0 +1,75 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+
+  @include flex-centred;
+  width: 100%;
+  border-bottom: 1px solid #ececec;
+
+  background-color: #ffffff;
+}
+
+.header__container {
+  @include flex-centred();
+}
+
+.header__logo {
+  margin-right: 93px;
+  padding: 24.5px 0;
+
+  transition: text-shadow var(--transition);
+
+  &--black {
+    color: #000000;
+  }
+
+  &:hover,
+  &:focus {
+    text-shadow: -3px -1px 1.5px rgba(155, 164, 165, 0.401);
+  }
+}
+
+.header-contacts {
+  @include flex-centred();
+  margin-left: auto;
+
+  @include font(500, 14px, 16 / 14, 00.02em);
+}
+
+.header-contacts__item {
+  & + & {
+    margin-left: 30px;
+  }
+}
+.header-contacts__link {
+  @include flex-centred();
+  padding: 32px 0;
+
+  transition: color var(--transition);
+
+  &--gray {
+    color: var(--primary-text-color);
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.header-contacts__svg {
+  margin-right: 10px;
+
+  transition: fill var(--transition);
+
+  &--gray {
+    fill: var(--primery-text-color);
+  }
+
+  .header-contacts__link:hover &,
+  .header-contacts__link:focus & {
+    fill: var(--accent-color);
+  }
+}

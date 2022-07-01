@@ -1,0 +1,13 @@
+.primary-title {
+  text-align: center;
+
+  @include font(900, 44px, 60 / 44, 00.06em);
+}
+
+.secondary-title {
+  text-align: center;
+
+  @include font(700, 36px, 42 / 36, 00.03em);
+
+  color: var(--title-color);
+}

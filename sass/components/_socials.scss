@@ -1,0 +1,20 @@
+.socials {
+  @include flex-centred();
+}
+.socials__item {
+  .socials__item + & {
+    margin-left: 10px;
+  }
+}
+.socials__link {
+  @include flex-centred();
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  background-color: transparent;
+}
+
+// .socials__icon {
+// }
