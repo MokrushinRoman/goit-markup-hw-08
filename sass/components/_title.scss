@@ -2,6 +2,11 @@
   text-align: center;
 
   @include font(900, 44px, 60 / 44, 00.06em);
+
+    @media screen and (max-width: 1199px) {
+      @include font(900, 26px, 42 / 26, 00.06em);
+      width: 360px;
+    }
 }
 
 .secondary-title {
