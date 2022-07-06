@@ -1,5 +1,4 @@
 .navigation__link.current {
-  display: block;
   color: var(--accent-color);
   &::after {
     content: ' ';
@@ -16,4 +15,8 @@
 
     animation: current var(--current-animation);
   }
+}
+
+.mobile-navigation__link.current {
+  color: var(--accent-color);
 }

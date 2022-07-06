@@ -1,5 +1,4 @@
 .footer {
-  
   padding-top: 60px;
   padding-bottom: 60px;
   margin: 0 auto;
@@ -8,7 +7,39 @@
 }
 
 .footer-container {
-  @include flex-centred($ai: baseline);
+  @media screen and (min-width: 320px) {
+    @include flex-centred();
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include flex-centred($ai: baseline);
+  }
+}
+
+.footer-container__child {
+  @media screen and (max-width: 1199px) {
+    .footer-container__child + & {
+      margin-top: 60px;
+    }
+  }
+}
+
+.connecting-container__logo-address-socials {
+  @media screen and (min-width: 768px) {
+    @include flex-centred($ai: baseline, $jc: space-around);
+    width: 100%;
+  }
+}
+
+.logo-address-socials__child {
+  @media screen and (max-width: 767px) {
+    .logo-address-socials__child + & {
+      margin-top: 60px;
+    }
+  }
 }
 
 .footer-logo {
@@ -17,6 +48,8 @@
   transition: text-shadow var(--transition);
 
   .logo--white {
+    display: inline-block;
+
     color: #ffffff;
   }
 
@@ -29,18 +62,35 @@
 // ADDRESS
 
 .address {
-  margin-right: 70px;
+  @media screen and (min-width: 320px) {
+    @include flex-centred();
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+  }
 }
 
 .address__item {
-  .address__item + & {
-    margin-top: 9px;
+  @media screen and (min-width: 320px) {
+    .address__item + & {
+      margin-top: 8px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .address__item + & {
+      margin-top: 9px;
+    }
   }
 }
 
 .address__link {
-  @include font(null, 14px, 24 / 14, 00.03em);
-
+  font-weight: inherit;
+  font-size: 14px;
+  line-height: 1, 71428;
+  letter-spacing: 0.03em;
 
   transition: color var(--transition);
 

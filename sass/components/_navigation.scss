@@ -1,7 +1,10 @@
 .navigation__list {
   @include flex-centred();
 
-  @include font(500, 14px, 16 / 14, 0.02em);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1, 14285;
+  letter-spacing: 0.02em;
 }
 
 .navigation__item {

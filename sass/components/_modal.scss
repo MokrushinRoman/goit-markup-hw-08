@@ -33,7 +33,11 @@
 
 .modal__title {
   margin-bottom: 30px;
-  @include font(700, 20px, 23 / 20, 00.03em);
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1, 15;
+  letter-spacing: 0.03em;
 
   &--black {
     color: var(--title-color);
@@ -57,7 +61,10 @@
   border-radius: 4px;
   outline: transparent;
 
-  @include font(400, 14px, 16 / 14, 00.01em);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1, 14285;
+  letter-spacing: 0.01em;
 
   transition: border-color var(--transition);
 
@@ -66,7 +73,11 @@
   }
 
   &::placeholder {
-    @include font(400, 14px, 16 / 14, 00.01em);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1, 14285;
+    letter-spacing: 0.01em;
+
     color: rgba(33, 33, 33, 0.374);
   }
 }
@@ -74,7 +85,10 @@
 .modal__label {
   @include position($t: -15px);
 
-  @include font(null, 12px, 14 / 12, 00.01em);
+  font-weight: inherit;
+  font-size: 12px;
+  line-height: 1, 16666;
+  letter-spacing: 0.01em;
 
   color: #757575;
 
@@ -119,14 +133,22 @@
   }
 
   &::placeholder {
-    @include font(400, 14px, 16 / 14, 00.01em);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1, 14285;
+    letter-spacing: 0.01em;
+
     color: rgba(33, 33, 33, 0.374);
   }
 }
 
 .checkbox__label {
   @include flex-centred();
-  @include font(null, 14px, 24 / 14, 00.03em);
+
+  font-weight: inherit;
+  font-size: 14px;
+  line-height: 1, 71428;
+  letter-spacing: 0.03em;
 
   color: #757575;
 }
