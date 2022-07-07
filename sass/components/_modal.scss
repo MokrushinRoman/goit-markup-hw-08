@@ -1,67 +1,69 @@
-.backdrop {
-  z-index: 5;
-  @include position($pos: fixed, $t: 0, $l: 0);
+// .backdrop {
+//   z-index: 5;
+//   @include position($pos: fixed, $t: 0, $l: 0);
 
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.2);
-  overflow-y: scroll;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(0, 0, 0, 0.2);
+//   overflow-y: scroll;
 
-  transition: visibility var(--transition), opacity var(--transition);
+//   transition: visibility var(--transition), opacity var(--transition);
 
-  @media screen and (max-width: 767px) {
-    padding: 94px 15px 0;
-  }
-}
+//   @media screen and (max-width: 767px) {
+//     display: flex;
+//     justify-content: center;
+//     padding: 94px 15px 0;
+//   }
+// }
 
-.modal {
-  @include position(absolute, 50%, 50%);
-  transform: translate(-50%, -50%) scale(1);
+// .modal {
+//   // @include position(absolute, 50%, 50%);
+//   // transform: translate(-50%, -50%) scale(1);
 
-  @include flex-centred();
-  flex-direction: column;
-  width: 100%;
-  padding: 40px;
+//   @include flex-centred();
+//   flex-direction: column;
+//   width: 100%;
+//   padding: 40px;
 
-  text-align: center;
+//   text-align: center;
 
-  background-color: #ffffff;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+//   background-color: #ffffff;
+//   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//     0px 2px 1px rgba(0, 0, 0, 0.2);
+//   border-radius: 4px;
 
-  transition: transform var(--transition) 200ms;
+//   transition: transform var(--transition) 200ms;
 
-  @media screen and (min-width: 320px) {
-    max-width: 450px;
+//   @media screen and (min-width: 320px) {
+//     max-width: 450px;
 
-    .backdrop.is-hidden & {
-      transform: scale(0);
-    }
-  }
+//     .backdrop.is-hidden & {
+//       transform: scale(0);
+//     }
+//   }
 
-  @media screen and (min-width: 768px) {
-    @include position(absolute, 50%, 50%);
-    transform: translate(-50%, -50%) scale(1);
+//   @media screen and (min-width: 768px) {
+//     @include position(absolute, 50%, 50%);
+//     transform: translate(-50%, -50%) scale(1);
 
-    max-width: 450px;
+//     max-width: 450px;
 
-    .backdrop.is-hidden & {
-      transform: translate(-50%, -50%) scale(0);
-    }
-  }
+//     .backdrop.is-hidden & {
+//       transform: translate(-50%, -50%) scale(0);
+//     }
+//   }
 
-  @media screen and (min-width: 1200px) {
-    @include position(absolute, 50%, 50%);
-    transform: translate(-50%, -50%) scale(1);
+//   @media screen and (min-width: 1200px) {
+//     @include position(absolute, 50%, 50%);
+//     transform: translate(-50%, -50%) scale(1);
 
-    max-width: 530px;
+//     max-width: 530px;
 
-    .backdrop.is-hidden & {
-      transform: translate(-50%, -50%) scale(0);
-    }
-  }
-}
+//     .backdrop.is-hidden & {
+//       transform: translate(-50%, -50%) scale(0);
+//     }
+//   }
+// }
 
 .modal__title {
   margin-bottom: 30px;
@@ -253,4 +255,31 @@
 
 .modal__subscription {
   margin: 0 auto;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 94px 15px 0;
+  overflow: scroll;
+
+  background-color: rgba($color: #000000, $alpha: 0.2);
+}
+
+.modal {
+  position: relative;
+
+  max-width: 450px;
+  padding: 40px;
+
+  background-color: #ffffff;
+
+  text-align: center;
 }
