@@ -77,10 +77,14 @@
               >
             </li>
           </ul>
+          
+          <button class="mobile-menu__button-open" type="button" aria-expanded="false" aria-controls="mob-menu-container" data-menu-open>
 
-          <svg class="header-mobile-menu__icon" width="40" height="40" data-menu-open>
-            <use href="./images/icons/symbol-defs.svg#icon-mobile-menu"></use>
-          </svg>
+            <svg class="mobile-menu__icon-open" width="40" height="40">
+              <use href="./images/icons/symbol-defs.svg#icon-mobile-menu"></use>
+            </svg>
+            
+          </button>
         </div>
       </header>
 
@@ -755,11 +759,14 @@
     </footer>
 
     <!-------------------------MOBILE-MENU--------------------------->
-    <div class="mobile-menu is-hidden" data-menu>
+    <div class="mobile-menu is-hidden" id="mob-menu-container" data-menu>
+      <button class="mobile-menu__button-close" type="button" aria-label="Переключатель мобильного меню" data-menu-close>
 
-      <svg class="menu-close-button__icon" width="30" height="30" data-menu-close>
-        <use href="./images/icons/symbol-defs.svg#icon-close-icon"></use>
-      </svg>
+        <svg class="mobile-menu__icon-close" width="40" height="40">
+          <use href="./images/icons/symbol-defs.svg#icon-close-icon"></use>
+        </svg>
+
+      </button>
      
       <navigation class="mobile-menu__mobile-navigation">
         <ul class="mobile-navigation__list">
@@ -816,8 +823,154 @@
       
     </div>
 
-    <!-------------------------SCRIPT--------------------------->
+    <!-- MODAL -->
+    <div class="backdrop is-hidden" data-modal>
 
+      <div class="modal">
+      
+        <b class="modal__title modal__title--black" >Оставьте свои данные, мы вам перезвоним</b>
+
+        <form class="modal__form">
+
+          <button class="close-button" type="button" aria-label="Переключатель меню подписки" data-modal-close>
+          
+            <svg class="close-button__icon" width="18" height="18">
+              <use href="./images/icons/symbol-defs.svg#icon-close-icon"></use>
+            </svg>
+
+           </button>
+
+            
+          <div class="modal_form-field">                
+
+            <input class="modal__input user" type="text" name="user-name" id="user-name" placeholder="Имя" data-placeholder="Имя">
+
+            <label class="modal__label is-hidden" for="user-name">Ф.И.О</label>
+                
+            <svg class="modal__icon" width="18" height="18">
+              <use href="./images/icons/symbol-defs.svg#icon-person"></use>
+            </svg>
+
+          </div>
+
+          <div class="modal_form-field">               
+
+            <input class="modal__input tel" type="tel" name="tel" id="user-tel" placeholder="Телефон" data-placeholder="Телефон">
+
+            <label class="modal__label is-hidden" for="user-tel">+380**-***-**-**</label>
+             
+            <svg class="modal__icon" width="18" height="18">
+              <use href="./images/icons/symbol-defs.svg#icon-phone"></use>
+            </svg>
+
+          </div>
+
+          <div class="modal_form-field">
+                
+            <input class="modal__input email" type="email" name="mail" id="user-mail" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})" placeholder="Почта" data-placeholder="Почта">
+
+            <label class="modal__label is-hidden" for="user-mail"><span lang="en">your@mail.com</span></label>
+
+            <svg class="modal__icon" width="18" height="18">
+              <use href="./images/icons/symbol-defs.svg#icon-email"></use>
+            </svg>
+
+          </div>
+
+          <div class="modal__textarea-container">
+            
+            <textarea class="modal__textarea" name="user-comment" id="user-comment" placeholder="Введите текст" data-placeholder="Введите текст"></textarea>
+            
+            <label class="modal__label is-hidden" for="user-comment">Комментарий</label>
+
+          </div>
+
+          <div class="modal__checkbox-container">
+            
+            
+            <label class="checkbox checkbox__label" for="accept">
+
+              <input class="checkbox__input visually-hidden" type="checkbox" name="accept" id="accept">
+
+              <svg class="checkbox__icon" width="16" height="15">
+               <use href="./images/icons/symbol-defs.svg#icon-checkbox"></use>
+             </svg>
+
+              Соглашаюсь с рассылкой и принимаю<a class="checkbox__link" href="">Условия договора</a>
+
+            </label>
+                
+          </div>
+
+          <button class="button modal__subscription" type="submit">Отправить</button>
+          
+        </form>
+        
+      </div>
+    </div>
+
+
+
+
+
+
+    <!-------------------------SCRIPT--------------------------->
+    <!-- footer placeholder -->
+    <script>
+      document.querySelector('.form__input').addEventListener('focusout', e => {
+        e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+      });
+
+      document.querySelector('.form__input').addEventListener('focusin', e => {
+        e.currentTarget.placeholder = ' ';
+      });
+    </script>
+
+    <!-- modal-placeholder -->
+    <script>
+      document.querySelector('.user').addEventListener('focusout', e => {
+        e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+      });
+
+      document.querySelector('.user').addEventListener('focusin', e => {
+        e.currentTarget.placeholder = ' ';
+      });
+    </script>
+
+      <script>
+      document.querySelector('.tel').addEventListener('focusout', e => {
+        e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+      });
+
+      document.querySelector('.tel').addEventListener('focusin', e => {
+        e.currentTarget.placeholder = ' ';
+      });
+    </script>
+
+      <script>
+      document.querySelector('.email').addEventListener('focusout', e => {
+        e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+      });
+
+      document.querySelector('.email').addEventListener('focusin', e => {
+        e.currentTarget.placeholder = ' ';
+      });
+    </script>
+
+    <script>
+      document.querySelector('.modal__textarea').addEventListener('focusout', e => {
+        e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+      });
+
+      document.querySelector('.modal__textarea').addEventListener('focusin', e => {
+        e.currentTarget.placeholder = ' ';
+      });
+    </script>
+
+        <!-- MODAL -->
+    <script src="./js/modal.js"></script>
+
+    <!-- MOBILE-MENU -->
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

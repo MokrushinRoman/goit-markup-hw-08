@@ -14,18 +14,23 @@
     0px 1px 3px rgba(0, 0, 0, 0.16);
 }
 
-.menu-close-button__icon {
+.mobile-menu__button {
   position: absolute;
   top: 11px;
   right: 11px;
 
+  border: none;
+
   background-color: transparent;
+}
+
+.mobile-menu__icon-close {
   fill: #212121;
 
   transition: fill var(--transition);
 
-  &:hover,
-  &:focus {
+  .mobile-menu__button:hover &,
+  .mobile-menu__button:focus & {
     fill: var(--accent-color);
   }
 }
