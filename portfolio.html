@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Mokrushin HW 5</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,7 +22,7 @@
   </head>
 
   <body>
-    <!-- -----------------------------------HEADER------------------------------------------ -->
+    <!---------------HEADER---------------->
 
     <header class="header">
       <div class="container header__container">
@@ -33,7 +33,7 @@
 
         <!------NAVIGATION-------->
 
-        <nav class="navigation">
+        <nav class="navigation header__navigation">
           <ul class="navigation__list">
             <li class="navigation__item">
               <a class="navigation__link navigation__link--black" href="./index.html">Студия</a>
@@ -75,19 +75,29 @@
             >
           </li>
         </ul>
+
+        <button
+          class="mobile-menu__button-open"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mob-menu-container"
+          data-menu-open
+        >
+          <svg class="mobile-menu__icon-open" width="40" height="40">
+            <use href="./images/icons/symbol-defs.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
-    <!-- -----------------------------------MAIN------------------------------------------ -->
-
+    <!---------MAIN---------->
     <main>
       <section class="section portfolio">
         <div class="container">
           <h1 class="portfolio__title primary-title visually-hidden">Портфолио</h1>
 
           <!---------FILTER---------->
-
-          <ul class="filter">
+          <ul class="filter__list">
             <li class="filter__item">
               <button class="filter__button filter__button--black-gray" type="button">Все</button>
             </li>
@@ -117,11 +127,41 @@
 
           <!---------PORTFOLIO GRID---------->
 
-          <ul class="grid">
+          <ul class="grid portfolio__grid">
             <li class="grid__item">
               <a class="grid__link" href="">
                 <div class="grid__img-container">
-                  <img src="./images/img-portfolio/portfolio-one.jpg" alt="ноутбук" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-1-deck.jpg    1x,
+                        ./images/img-portfolio/portfolio-1-deck-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-1-tabl.jpg    1x,
+                        ./images/img-portfolio/portfolio-1-tabl-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-1-mob.jpg    1x,
+                        ./images/img-portfolio/portfolio-1-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img
+                      src="./images/img-portfolio/portfolio-1-deck.jpg"
+                      alt="ноутбук"
+                      width="370"
+                    />
+                  </picture>
 
                   <p class="grid__text grid__text--whire-accent">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -141,11 +181,37 @@
             <li class="grid__item">
               <a class="grid__link" href="">
                 <div class="grid__img-container">
-                  <img
-                    src="./images/img-portfolio/portfolio-two.jpg"
-                    alt="баскетболисты"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-2-deck.jpg    1x,
+                        ./images/img-portfolio/portfolio-2-deck-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-2-tabl.jpg    1x,
+                        ./images/img-portfolio/portfolio-2-tabl-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-2-mob.jpg    1x,
+                        ./images/img-portfolio/portfolio-2-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img
+                      src="./images/img-portfolio/portfolio-2-deck.jpg"
+                      alt="баскетболисты"
+                      width="370"
+                    />
+                  </picture>
 
                   <p class="grid__text grid__text--whire-accent">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -167,11 +233,37 @@
             <li class="grid__item">
               <a class="grid__link" href="">
                 <div class="grid__img-container">
-                  <img
-                    src="./images/img-portfolio/portfolio-three.jpg"
-                    alt="рыбный ресторан"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-3-deck.jpg    1x,
+                        ./images/img-portfolio/portfolio-3-deck-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-3-tabl.jpg    1x,
+                        ./images/img-portfolio/portfolio-3-tabl-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-3-mob.jpg    1x,
+                        ./images/img-portfolio/portfolio-3-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img
+                      src="./images/img-portfolio/portfolio-3-deck.jpg"
+                      alt="рыбный ресторан"
+                      width="370"
+                    />
+                  </picture>
 
                   <p class="grid__text grid__text--whire-accent">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -193,7 +285,37 @@
             <li class="grid__item">
               <a class="grid__link" href="">
                 <div class="grid__img-container">
-                  <img src="./images/img-portfolio/portfolio-four.jpg" alt="наушники" width="370" />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-4-deck.jpg    1x,
+                        ./images/img-portfolio/portfolio-4-deck-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-4-tabl.jpg    1x,
+                        ./images/img-portfolio/portfolio-4-tabl-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-4-mob.jpg    1x,
+                        ./images/img-portfolio/portfolio-4-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img
+                      src="./images/img-portfolio/portfolio-4-deck.jpg"
+                      alt="наушники"
+                      width="370"
+                    />
+                  </picture>
 
                   <p class="grid__text grid__text--whire-accent">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -215,11 +337,37 @@
             <li class="grid__item">
               <a class="grid__link" href="">
                 <div class="grid__img-container">
-                  <img
-                    src="./images/img-portfolio/portfolio-five.jpg"
-                    alt="две коробки"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-5-deck.jpg    1x,
+                        ./images/img-portfolio/portfolio-5-deck-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-5-tabl.jpg    1x,
+                        ./images/img-portfolio/portfolio-5-tabl-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-5-mob.jpg    1x,
+                        ./images/img-portfolio/portfolio-5-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img
+                      src="./images/img-portfolio/portfolio-5-deck.jpg"
+                      alt="две коробки"
+                      width="370"
+                    />
+                  </picture>
 
                   <p class="grid__text grid__text--whire-accent">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -241,11 +389,37 @@
             <li class="grid__item">
               <a class="grid__link" href="">
                 <div class="grid__img-container">
-                  <img
-                    src="./images/img-portfolio/portfolio-six.jpg"
-                    alt="екран компьютера"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-6-deck.jpg    1x,
+                        ./images/img-portfolio/portfolio-6-deck-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-6-tabl.jpg    1x,
+                        ./images/img-portfolio/portfolio-6-tabl-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-6-mob.jpg    1x,
+                        ./images/img-portfolio/portfolio-6-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img
+                      src="./images/img-portfolio/portfolio-6-deck.jpg"
+                      alt="екран компьютера"
+                      width="370"
+                    />
+                  </picture>
 
                   <p class="grid__text grid__text--whire-accent">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -267,11 +441,37 @@
             <li class="grid__item">
               <a class="grid__link" href="">
                 <div class="grid__img-container">
-                  <img
-                    src="./images/img-portfolio/portfolio-seven.jpg"
-                    alt="открытая книга"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-7-deck.jpg    1x,
+                        ./images/img-portfolio/portfolio-7-deck-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-7-tabl.jpg    1x,
+                        ./images/img-portfolio/portfolio-7-tabl-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-7-mob.jpg    1x,
+                        ./images/img-portfolio/portfolio-7-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img
+                      src="./images/img-portfolio/portfolio-7-deck.jpg"
+                      alt="открытая книга"
+                      width="370"
+                    />
+                  </picture>
 
                   <p class="grid__text grid__text--whire-accent">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -293,11 +493,37 @@
             <li class="grid__item">
               <a class="grid__link" href="">
                 <div class="grid__img-container">
-                  <img
-                    src="./images/img-portfolio/portfolio-eight.jpg"
-                    alt="бирка с надписью"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-8-deck.jpg    1x,
+                        ./images/img-portfolio/portfolio-8-deck-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-8-tabl.jpg    1x,
+                        ./images/img-portfolio/portfolio-8-tabl-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-8-mob.jpg    1x,
+                        ./images/img-portfolio/portfolio-8-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img
+                      src="./images/img-portfolio/portfolio-8-deck.jpg"
+                      alt="бирка с надписью"
+                      width="370"
+                    />
+                  </picture>
 
                   <p class="grid__text grid__text--whire-accent">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -319,11 +545,37 @@
             <li class="grid__item">
               <a class="grid__link" href="">
                 <div class="grid__img-container">
-                  <img
-                    src="./images/img-portfolio/portfolio-nine.jpg"
-                    alt="работа за ноутбуком"
-                    width="370"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-9-deck.jpg    1x,
+                        ./images/img-portfolio/portfolio-9-deck-2x.jpg 2x
+                      "
+                      media="(min-width: 1200px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-9-tabl.jpg    1x,
+                        ./images/img-portfolio/portfolio-9-tabl-2x.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+
+                    <source
+                      srcset="
+                        ./images/img-portfolio/portfolio-9-mob.jpg    1x,
+                        ./images/img-portfolio/portfolio-9-mob-2x.jpg 2x
+                      "
+                      media="(min-width: 320px)"
+                    />
+
+                    <img
+                      src="./images/img-portfolio/portfolio-9-deck.jpg"
+                      alt="работа за ноутбуком"
+                      width="370"
+                    />
+                  </picture>
 
                   <p class="grid__text grid__text--whire-accent">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и
@@ -342,90 +594,90 @@
           </ul>
         </div>
       </section>
+      -->
     </main>
-
-    <!-------------------------------------FOOTER-------------------------------------------->
 
     <footer class="footer">
       <div class="container footer-container">
-        <div>
-          <a class="footer-logo logo" href="./index.html"
-            >Web<span class="logo--white">Studio</span></a
-          >
+        <div class="connecting-container__logo-address-socials footer-container__child">
+          <div class="connecting-container__logo-address logo-address-socials__child">
+            <a class="footer-logo logo" href="./index.html"
+              >Web<span class="logo--white">Studio</span></a
+            >
 
-          <!-------ADDRESS------->
+            <!-------ADDRESS------->
 
-          <address class="address">
-            <ul class="address__list">
-              <li class="address__item">
-                <a
-                  class="address__link address__link--white"
-                  href="https://goo.gl/maps/2CgbArVc6HHT8Zt37"
-                  target="_blank"
-                  rel="noopener nofollow noreferre"
-                >
-                  г. Киев, пр-т Леси Украинки, 26
+            <address class="address">
+              <ul class="address__list">
+                <li class="address__item">
+                  <a
+                    class="address__link address__link--white"
+                    href="https://goo.gl/maps/2CgbArVc6HHT8Zt37"
+                    target="_blank"
+                    rel="noopener nofollow noreferre"
+                  >
+                    г. Киев, пр-т Леси Украинки, 26
+                  </a>
+                </li>
+
+                <li class="address__item">
+                  <a class="address__link address__link--gray" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+
+                <li class="address__item">
+                  <a class="address__link address__link--gray" href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <!-------SOCIALS------->
+
+          <div class="container__socials logo-address-socials__child">
+            <p class="top-text top-text--white">присоединяйтесь</p>
+
+            <ul class="footer-socials socials">
+              <li class="socials__item">
+                <a href="" class="socials__link socials__link--transparent">
+                  <svg class="socials__icon socials__icon--white" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
                 </a>
               </li>
 
-              <li class="address__item">
-                <a class="address__link address__link--gray" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
+              <li class="socials__item">
+                <a href="" class="socials__link socials__link--transparent">
+                  <svg class="socials__icon socials__icon--white" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+                </a>
               </li>
 
-              <li class="address__item">
-                <a class="address__link address__link--gray" href="tel:+380961111111"
-                  >+38 096 111 11 11</a
-                >
+              <li class="socials__item">
+                <a href="" class="socials__link socials__link--transparent">
+                  <svg class="socials__icon socials__icon--white" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="socials__item">
+                <a href="" class="socials__link socials__link--transparent">
+                  <svg class="socials__icon socials__icon--white" width="20" height="20">
+                    <use href="./images/icons/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-
-        <!-------SOCIALS------->
-
-        <div class="">
-          <p class="top-text top-text--white">присоединяйтесь</p>
-
-          <ul class="footer-socials socials">
-            <li class="socials__item">
-              <a href="" class="socials__link socials__link--transparent">
-                <svg class="socials__icon socials__icon--white" width="20" height="20">
-                  <use href="./images/icons/symbol-defs.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="socials__item">
-              <a href="" class="socials__link socials__link--transparent">
-                <svg class="socials__icon socials__icon--white" width="20" height="20">
-                  <use href="./images/icons/symbol-defs.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="socials__item">
-              <a href="" class="socials__link socials__link--transparent">
-                <svg class="socials__icon socials__icon--white" width="20" height="20">
-                  <use href="./images/icons/symbol-defs.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="socials__item">
-              <a href="" class="socials__link socials__link--transparent">
-                <svg class="socials__icon socials__icon--white" width="20" height="20">
-                  <use href="./images/icons/symbol-defs.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-
         <!-------SUBSCRIPTION FORM------->
 
-        <div class="subscription-container">
+        <div class="container__subscription footer-container__child">
           <b class="top-text--white top-text">Подпишитесь на рассылку</b>
 
           <form class="form">
@@ -445,7 +697,7 @@
               >
             </div>
 
-            <button class="button" type="submit">
+            <button class="button footer-button" type="submit">
               Подписаться
 
               <svg class="form__icon" width="24" height="24">
@@ -457,7 +709,93 @@
       </div>
     </footer>
 
-    <!-- ---------------------------SCRIPT-------------------------------- -->
-    <script src="./js/modal.js"></script>
+    <!-------------------------MOBILE-MENU--------------------------->
+    <div class="mobile-menu is-hidden" id="mob-menu-container" data-menu>
+      <button
+        class="mobile-menu__button-close"
+        type="button"
+        aria-label="Переключатель мобильного меню"
+        data-menu-close
+      >
+        <svg class="mobile-menu__icon-close" width="40" height="40">
+          <use href="./images/icons/symbol-defs.svg#icon-close-icon"></use>
+        </svg>
+      </button>
+
+      <navigation class="mobile-menu__mobile-navigation">
+        <ul class="mobile-navigation__list">
+          <li class="mobile-navigation__item">
+            <a
+              class="mobile-navigation__link mobile-navigation__link--black current"
+              href="./index.html"
+              >Студия</a
+            >
+          </li>
+
+          <li class="mobile-navigation__item">
+            <a
+              class="mobile-navigation__link mobile-navigation__link--black"
+              href="./portfolio.html"
+              >Портфолио</a
+            >
+          </li>
+
+          <li class="mobile-navigation__item">
+            <a class="mobile-navigation__link mobile-navigation__link--black" href="">Контакты</a>
+          </li>
+        </ul>
+      </navigation>
+
+      <div class="connecting-container__contacts-socials">
+        <ul class="mobile-contacts__list">
+          <li class="mobile-contacts__item">
+            <a class="mobile-contacts__link mobile-contacts__link--gray" href="tel=+380961111111"
+              >+38 096 111 11 11</a
+            >
+          </li>
+
+          <li class="mobile-contacts__item">
+            <a
+              class="mobile-contacts__link mobile-contacts__link--gray"
+              href="mailto=info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+
+        <ul class="mobile-socials__list">
+          <li class="mobile-socials__item">
+            <a class="mobile-socials__link" href="">Instagram</a>
+          </li>
+
+          <li class="mobile-socials__item">
+            <a class="mobile-socials__link" href="">Twitter</a>
+          </li>
+
+          <li class="mobile-socials__item">
+            <a class="mobile-socials__link" href="">Facebook</a>
+          </li>
+
+          <li class="mobile-socials__item">
+            <a class="mobile-socials__link" href="">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-------------------------SCRIPT--------------------------->
+    <!-- footer placeholder -->
+    <script>
+      document.querySelector('.form__input').addEventListener('focusout', e => {
+        e.currentTarget.placeholder = e.currentTarget.dataset.placeholder;
+      });
+
+      document.querySelector('.form__input').addEventListener('focusin', e => {
+        e.currentTarget.placeholder = ' ';
+      });
+    </script>
+
+    <!-- MOBILE-MENU -->
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

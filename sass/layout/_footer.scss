@@ -19,6 +19,9 @@
 
   @media screen and (min-width: 1200px) {
     @include flex-centred($ai: baseline);
+    flex-direction: row;
+
+    text-align: left;
   }
 }
 
@@ -34,6 +37,10 @@
   @media screen and (min-width: 768px) {
     @include flex-centred($ai: baseline, $jc: space-around);
     width: 100%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include flex-centred($d: inline-flex, $ai: baseline, $jc: flex-start);
   }
 }
 
@@ -92,7 +99,7 @@
 .address__link {
   font-weight: inherit;
   font-size: 14px;
-  line-height: 1, 71428;
+  line-height: 1.7142;
   letter-spacing: 0.03em;
 
   transition: color var(--transition);

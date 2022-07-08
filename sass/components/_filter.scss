@@ -1,15 +1,22 @@
-.portfolio {
-  background-color: #ffffff;
-}
+.filter__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -8px;
 
-.filter {
-  @include flex-centred();
-  margin: 0 auto 50px;
+  @media screen and (min-width: 768px) {
+    @include flex-centred();
+    flex-wrap: nowrap;
+    margin: 0 auto;
+  }
 }
 
 .filter__item {
-  .filter__item + & {
-    margin-left: 8px;
+  margin: 8px;
+
+  @media screen and (min-width: 768px) {
+    .filter__item + & {
+      margin-left: 8px;
+    }
   }
 }
 .filter__button {
@@ -21,6 +28,6 @@
 
   font-weight: 500;
   font-size: 16px;
-  line-height: 1, 625;
+  line-height: 1.625;
   letter-spacing: 0.03em;
 }

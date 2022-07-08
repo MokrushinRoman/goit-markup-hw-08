@@ -1,13 +1,18 @@
 .container__subscription {
   margin-left: auto;
 
-  @media screen and (min-width: 320px) {
+  @media screen and (min-width: 320px) and (max-width: 1199px) {
     width: 100%;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: inline-block;
   }
 }
 
 .form {
   @media screen and (min-width: 1200px) {
+    display: flex;
     transition: transform var(--transition);
 
     &:focus-within {
@@ -32,7 +37,7 @@
 
   font-weight: 400;
   font-size: 14px;
-  line-height: 1, 71428;
+  line-height: 1.7142;
   letter-spacing: 0.03em;
 
   transition: border var(--transition);
@@ -76,7 +81,7 @@
 .form__input::placeholder {
   font-weight: inherit;
   font-size: 16px;
-  line-height: 1, 25;
+  line-height: 1.25;
   letter-spacing: 0.03em;
 
   color: rgba(255, 255, 255, 0.6);
@@ -87,7 +92,7 @@
 
   font-weight: 400;
   font-size: 14px;
-  line-height: 1, 71428;
+  line-height: 1.7142;
   letter-spacing: 0.03em;
 
   transition: visibility var(--transition), opacity var(--transition);
@@ -99,6 +104,10 @@
   .form__input:focus + & {
     visibility: visible;
     opacity: 1;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    left: 164px;
   }
 }
 

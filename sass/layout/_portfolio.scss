@@ -1,3 +1,7 @@
+.portfolio {
+  background-color: #ffffff;
+}
+
 .filter__button {
   transition: color var(--transition), background-color var(--transition),
     box-shadow var(--transition);
@@ -16,6 +20,18 @@
   }
 }
 
+.portfolio__grid {
+  margin-top: 40px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 25px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 45px;
+  }
+}
+
 .grid__text {
   transition: top var(--transition);
 
@@ -31,6 +47,9 @@
 }
 
 .grid__discription {
+  height: 146px;
+  border: 1px solid #eeeeee;
+
   .grid__link:hover &,
   .grid__link:focus & {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),

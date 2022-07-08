@@ -1,6 +1,8 @@
 .mobile-menu {
   z-index: 5;
   @include position($pos: fixed, $t: 0, $l: 0);
+  transform-origin: top right;
+  transform: translate(0) scale(1);
 
   @include flex-centred();
   flex-wrap: wrap;
@@ -12,9 +14,15 @@
   background-color: #ffffff;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
     0px 1px 3px rgba(0, 0, 0, 0.16);
+
+  transition: transform var(--transition);
+
+  &.is-hidden {
+    transform: translate(0) scale(0);
+  }
 }
 
-.mobile-menu__button {
+.mobile-menu__button-close {
   position: absolute;
   top: 11px;
   right: 11px;
@@ -29,8 +37,8 @@
 
   transition: fill var(--transition);
 
-  .mobile-menu__button:hover &,
-  .mobile-menu__button:focus & {
+  .mobile-menu__button-close:hover &,
+  .mobile-menu__button-close:focus & {
     fill: var(--accent-color);
   }
 }
@@ -49,7 +57,7 @@
 .mobile-navigation__link {
   font-weight: 500;
   font-size: 40px;
-  line-height: 1, 175;
+  line-height: 1.175;
   letter-spacing: 0.02em;
   text-align: center;
 
@@ -87,14 +95,24 @@
 
   font-weight: 500;
   font-size: 24px;
-  line-height: 1, 16666;
+  line-height: 1.1666;
   letter-spacing: 0.02em;
 
   .mobile-contacts__item:hover &,
   .mobile-contacts__item:focus & {
     font-weight: 500;
     font-size: 34px;
-    line-height: 1, 17647;
+    line-height: 1.1764;
+    letter-spacing: 0.02em;
+
+    color: var(--accent-color);
+  }
+
+  &:hover,
+  &:focus {
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.1764;
     letter-spacing: 0.02em;
 
     color: var(--accent-color);
@@ -128,6 +146,11 @@
 
   .mobile-socials__item:hover &,
   .mobile-socials__item:focus & {
+    color: #757575;
+  }
+
+  &:hover,
+  &:focus {
     color: #757575;
   }
 }

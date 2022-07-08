@@ -1,15 +1,20 @@
 .grid {
-  display: flex;
+  @include flex-centred();
   flex-wrap: wrap;
-  margin: -15px;
+  gap: 30px;
 }
 
 .grid__item {
-  margin: 15px;
-}
+  max-width: 450px;
+  width: 100%;
 
-.grid__link {
-  width: 370px;
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .grid__img-container {
@@ -29,7 +34,7 @@
   height: 100%;
 
   font-size: 18px;
-  line-height: 1, 55555;
+  line-height: 1.5555;
   letter-spacing: 0.03em;
 }
 
@@ -49,6 +54,6 @@
   margin-top: 4px;
 
   font-size: 16px;
-  line-height: 1, 875;
+  line-height: 1.875;
   letter-spacing: 0.03em;
 }
