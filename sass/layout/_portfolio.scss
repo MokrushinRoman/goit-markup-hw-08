@@ -32,6 +32,14 @@
   }
 }
 
+.grid__item {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &:first-child .grid__link .grid__discription {
+      height: 146px;
+    }
+  }
+}
+
 .grid__text {
   transition: top var(--transition);
 
