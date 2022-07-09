@@ -422,12 +422,12 @@ address {
 }
 @media screen and (min-width: 320px) {
   .container {
-    max-width: 500px;
+    max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 900px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -620,6 +620,9 @@ address {
 }
 
 .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   padding: 40px;
   text-align: center;
   background-color: #ffffff;
@@ -636,9 +639,6 @@ address {
 }
 @media screen and (min-width: 320px) {
   .modal {
-    position: absolute;
-    top: 69%;
-    left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     max-width: 450px;
@@ -651,11 +651,6 @@ address {
 }
 @media screen and (min-width: 768px) {
   .modal {
-    position: absolute;
-    top: 88%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
     max-width: 450px;
     width: 100%;
   }
@@ -666,9 +661,6 @@ address {
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
     -webkit-transform: translate(-50%, -50%) scale(1);
             transform: translate(-50%, -50%) scale(1);
     max-width: 530px;
@@ -1149,12 +1141,6 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-line-pack: justify;
@@ -1196,12 +1182,6 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 100%;
 }
 
@@ -1214,7 +1194,6 @@ address {
   font-size: 40px;
   line-height: 1.175;
   letter-spacing: 0.02em;
-  text-align: center;
   -webkit-transition: color var(--transition);
   transition: color var(--transition);
 }
@@ -1227,19 +1206,12 @@ address {
 
 .connecting-container__contacts-socials {
   width: 100%;
-  text-align: center;
 }
 
 .mobile-contacts__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   height: 40px;
 }
 .mobile-contacts__item + .mobile-contacts__item {
@@ -1277,21 +1249,15 @@ address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-top: 64px;
 }
 
 .mobile-socials__item {
-  padding-left: 10px;
   padding-right: 10px;
   text-align: center;
 }
 .mobile-socials__item + .mobile-socials__item {
+  padding-left: 10px;
   border-left: 1px solid rgba(33, 33, 33, 0.2);
 }
 
@@ -1582,8 +1548,12 @@ address {
 }
 
 .benefits {
-  padding-bottom: 0;
   background-color: #ffffff;
+}
+@media screen and (min-width: 1200px) {
+  .benefits {
+    padding-bottom: 0;
+  }
 }
 
 .benefits__list {
@@ -1740,7 +1710,7 @@ address {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 30px;
   gap: 30px;
 }
 
@@ -2272,7 +2242,6 @@ address {
 }
 
 .grid__discription {
-  height: 146px;
   border: 1px solid #eeeeee;
 }
 .grid__link:hover .grid__discription, .grid__link:focus .grid__discription {
@@ -2280,6 +2249,9 @@ address {
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.grid__top-text {
+  display: inline;
+}
 .grid__top-text--black {
   color: #212121;
 }

@@ -11,6 +11,8 @@
 }
 
 .modal {
+  @include position($t: 50%, $l: 50%);
+
   padding: 40px;
 
   text-align: center;
@@ -29,7 +31,6 @@
   text-align: center;
 
   @media screen and (min-width: 320px) {
-    @include position($t: 69%, $l: 50%);
     transform: translate(-50%, -50%);
 
     max-width: 450px;
@@ -41,9 +42,6 @@
   }
 
   @media screen and (min-width: 768px) {
-    @include position($t: 88%, $l: 50%);
-    transform: translate(-50%, -50%);
-
     max-width: 450px;
     width: 100%;
 
@@ -53,7 +51,6 @@
   }
 
   @media screen and (min-width: 1200px) {
-    @include position($t: 50%, $l: 50%);
     transform: translate(-50%, -50%) scale(1);
 
     max-width: 530px;

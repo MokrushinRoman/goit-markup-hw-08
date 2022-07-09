@@ -47,7 +47,6 @@
 }
 
 .grid__discription {
-  height: 146px;
   border: 1px solid #eeeeee;
 
   .grid__link:hover &,
@@ -58,6 +57,7 @@
 }
 
 .grid__top-text {
+  display: inline;
   &--black {
     color: #212121;
   }

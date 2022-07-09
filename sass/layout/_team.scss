@@ -7,7 +7,7 @@
 .team__list {
   @include flex-centred();
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 30px;
   gap: 30px;
 }
 
